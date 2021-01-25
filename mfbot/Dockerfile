@@ -8,7 +8,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt-get update
 RUN apt-get upgrade -y
 
-RUN apt-get install python3-pip wget apt-utils unzip dirmngr gnupg apt-transport-https ca-certificates software-properties-common libcurl4-openssl-dev libssl-dev build-essential librtmp-dev libmysqlclient-dev tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev -y
+RUN apt-get install python3-pip wget apt-utils unzip dirmngr gnupg apt-transport-https ca-certificates software-properties-common libcurl4-openssl-dev libssl-dev -y
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 RUN apt-add-repository 'deb https://download.mono-project.com/repo/ubuntu stable-focal main'
